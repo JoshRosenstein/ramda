@@ -1,0 +1,34 @@
+{
+   "name": "@rosey/ramda",
+   "version": "0.0.1",
+   "description": "Mix of Ramda Utilities from various sources",
+   "keywords": [],
+   "main": "dist/cjs/index.js",
+   "module": "dist/es/index.js",
+   "jsnext:main": "dist/es/index.js",
+   "browser": "dist/umd/index.js",
+   "moduleName": "rosey-ramda",
+   "files": [
+     "dist",
+     "README.md"
+   ],
+   "license": "MIT",
+   "author": {
+     "name": "Joshua Rosenstein"
+   },
+   "dependencies": {
+      "ramda": "0.25.0"
+   },
+   "devDependencies": {
+      "npm-run-all": "^4.0.2",
+      "rimraf": "^2.6.1",
+        "rollup": "0.56.5"
+   },
+   "scripts": {
+      "build": "npm-run-all clean rollup",
+      "test:typescript": "dtslint types",
+      "clean": "rimraf dist",
+      "rollup": "rollup -c",
+      "watch": "rollup -c --watch"
+   }
+}
